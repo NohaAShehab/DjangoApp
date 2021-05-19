@@ -8,7 +8,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-# DataFlair #AJAX_tutorial
+#AJAX_tutorial
 def index(request):
     posts = Post.objects.all()
     return render(request, 'post/index.html', {'posts': posts})

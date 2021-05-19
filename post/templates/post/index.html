@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class = "display-3 color-red"><center>DataFlair AJAX Tutorial<br>Post APP</center></div>
+    <div class = "display-3 color-red"><center>Django Ajax Simple App <br>Post APP</center></div>
     {% for post in posts %}
         <div class = 'container jumbotron'>
         <h3 class="display-5">{{ forloop.counter }}. {{ post.post_heading }}</h3>
@@ -20,21 +20,21 @@
 
 <script type="text/javascript">
 $('.likebutton').click(function(){
-var id;
-id = $(this).attr("data-catid");
-$.ajax(
-        {
-            type:"GET",
-            url: "like",
-            data:{
-                "post_id": id,
-            },
+    var id;
+    id = $(this).attr("data-catid");
+    $.ajax(
+            {
+                type:"GET",
+                url: "like", // database
+                data:{
+                    "post_id": id,
+                },
 
-        success: function( data )
-        {
-
-            $( '#like'+ id ).removeClass('btn btn-primary btn-lg');
-            $( '#like'+ id ).addClass('btn btn-success btn-lg'); } }) });
+            success: function( data )
+            {
+                // update dom
+                $( '#like'+ id ).removeClass('btn btn-primary btn-lg');
+                $( '#like'+ id ).addClass('btn btn-danger btn-lg'); } }) });
 
 </script>
 </body>

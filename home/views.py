@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 
 
-# DataFlair #Views #TemplateInheritance
+#Views #TemplateInheritance
 # Create your views here.
 def home(request):
     return render(request, 'base.html')

@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('DataFlair Django Tutorial<html><body><h1> Hello World DataFlair Dango tutorials</body></html>')
+    return HttpResponse('Django Nohaaaaaaaa <html><body><h1> Hello World Ya nohaaaaaaa </body></html>')
 
